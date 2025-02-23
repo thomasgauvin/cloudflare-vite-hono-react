@@ -1,4 +1,4 @@
-# Cloudflare Workers using React Vite and Hono API templare
+# Cloudflare Workers using React Vite and Hono API template
 
 This project uses the [Cloudflare Workers Vite plugin](https://www.npmjs.com/package/@cloudflare/vite-plugin), [Hono](https://hono.dev/) for APIs (stored in `/api`) and the frontend React single-page application (in `src`).
 
