@@ -5,7 +5,7 @@ This project uses the [Cloudflare Workers Vite plugin](https://www.npmjs.com/pac
 > [!NOTE]  
 > **[Cloudflare Workers Vite plugin](https://www.npmjs.com/package/@cloudflare/vite-plugin) is still in development**. There remains features that are not yet supported by the plugin, such as `wrangler dev --remote` (needed for certain bindings such as Browser Rendering), the AI binding (see https://github.com/cloudflare/workers-sdk/pull/8016), general improvements needed (see https://github.com/cloudflare/workers-sdk/pull/8223).
 >
-> At this time, I still recommend setting up a single-page-application + Hono API by following this guide: https://thomasgauvin.com/writing/how-to-host-react-angular-vue-and-other-single-page-applications-on-cloudflare-workers-with-static-assets/
+> At this time, I still recommend setting up a single-page-application + Hono API by following this guide: https://thomasgauvin.com/writing/how-to-host-react-angular-vue-and-other-single-page-applications-on-cloudflare-workers-with-static-assets/, which is what I'm using for [ai-chat-template](https://github.com/thomasgauvin/ai-chat-template).
 
 
 The project is configured such that the React app will be built by the Vite bundler into `dist` (default config for `vite.config.ts`). The Workers project is configured to serve the static assets of `dist` (configured in `wrangler.jsonc`). If requests don't resolve in static assets, then the Hono API (in `api`) will execute (configured in `wrangler.jsonc` with the `main` entrypoint).
